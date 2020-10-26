@@ -8,8 +8,8 @@ function App() {
       <main>
         <Header />
         <Switch>
-          <Route exact path='/' component={ Products }/>
-          <Route exact path='/product/:id' component={ ProductDetails }/>
+          <Route exact path='/adidas' component={ Products }/>
+          <Route exact path='/adidas/product/:id' component={ ProductDetails }/>
         </Switch>
       </main>
     </Router>
