@@ -28,7 +28,7 @@ function ProductDetails(url) {
       <div id='card'>
         <div class='product-image-container'>
           <div class='product-image-circle-bg' style={{ background: `${ image_bg }` }}></div>
-          <img class='product-image' src={ image } />
+          <img class='product-image' src={ `../${image}` } />
         </div>
         <div class='product-details'>
           <div class='product-title'> { title } </div>
