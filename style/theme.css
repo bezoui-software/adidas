@@ -1,3 +1,7 @@
+:root {
+  --main-color: #f44d43;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: #f44d43;
+  background: var(--main-color);
   color: white;
   margin-top: 0;
   margin-bottom: 40px;
@@ -47,9 +51,69 @@ header nav .link {
 }
 
 header nav .link:hover {
-  color: #f44d43;
+  color: var(--main-color);
   font-weight: 500;
   background: white;
+}
+
+header #laptop-navbar {
+  display: flex;
+}
+
+header #mobile-navbar {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: 99;
+  background: var(--main-color);
+  flex-direction: column;
+  overflow: hidden;
+  animation: 1s slideDown ease forwards;
+}
+
+header #mobile-navbar .link {
+  width: 100%;
+  border-radius: 0;
+}
+
+header #mobile-navbar .link:active {
+  color: var(--main-color);
+  font-weight: 500;
+  background: white;
+}
+
+header #mobile-navbar .link:active {
+  color: white;
+  font-weight: 300;
+  background: transparent;
+}
+
+header #mobile-navbar-toggle {
+  display: none;
+  position: absolute;
+  left: 20px;
+}
+
+header .hide-mobile-navbar {
+  animation: 1s slideUp ease forwards !important;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translate(0, -100%);
+    z-index: -99;
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
+  to {
+    transform: translate(0, 0);
+    z-index: 99;
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -57,7 +121,17 @@ header nav .link:hover {
     justify-content: center;
   }
 
-  header nav {
+  header #laptop-navbar {
     display: none;
+
+  }
+
+  header #mobile-navbar {
+    display: flex;
+    justify-self: flex-start;
+  }
+
+  header #mobile-navbar-toggle {
+    display: block;
   }
 }
