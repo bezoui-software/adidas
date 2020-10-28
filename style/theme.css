@@ -27,6 +27,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 15px;
+  z-index: 999;
 }
 
 header #logo {
@@ -65,12 +66,11 @@ header #mobile-navbar {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 90px;
   z-index: 99;
   background: var(--main-color);
   flex-direction: column;
   overflow: hidden;
-  animation: 1s slideDown ease forwards;
 }
 
 header #mobile-navbar .link {
@@ -103,16 +103,16 @@ header .hide-mobile-navbar {
 @keyframes slideUp {
   to {
     transform: translate(0, -100%);
-    z-index: -99;
     opacity: 0;
+    pointer-events:  none;
   }
 }
 
 @keyframes slideDown {
   to {
     transform: translate(0, 0);
-    z-index: 99;
     opacity: 1;
+    pointer-events: all;
   }
 }
 
