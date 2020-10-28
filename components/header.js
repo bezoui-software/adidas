@@ -9,7 +9,7 @@ function Header() {
         <Link to='/adidas/' className='link'>Contact</Link>
         <Link to='/adidas/' className='link'>About</Link>
       </nav>
-      <nav id='mobile-navbar' className='hide-mobile-navbar'>
+      <nav id='mobile-navbar' className='hide-mobile-navbar' onClick={toggleMobileNavbar}>
         <Link to='/adidas/' className='link'>Products</Link>
         <Link to='/adidas/' className='link'>Contact</Link>
         <Link to='/adidas/' className='link'>About</Link>
