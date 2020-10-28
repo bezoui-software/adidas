@@ -7,6 +7,7 @@ function flipCardByMouse() {
 
   const childs = card.childNodes;
   card_container.addEventListener('mousemove', e => {
+    if (isMobile()) return;
     const x = ((window.innerWidth/2) - e.pageX) / 5;
     const y = ((window.innerHeight/2) - e.pageY) / 5;
     const card = document.getElementById('card');
