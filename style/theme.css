@@ -101,7 +101,23 @@ header #mobile-navbar-toggle {
 }
 
 header .hide-mobile-navbar {
-  animation: 1s slideUp ease forwards !important;
+  animation: 0s slideLeft ease forwards !important;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translate(-100%, 0);
+    opacity: 0;
+    pointer-events:  none;
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 
 @keyframes slideUp {
@@ -109,8 +125,6 @@ header .hide-mobile-navbar {
     transform: translate(0, -100%);
     opacity: 0;
     pointer-events:  none;
-    overflow: hidden;
-    height: 0;
   }
 }
 
@@ -119,8 +133,6 @@ header .hide-mobile-navbar {
     transform: translate(0, 0);
     opacity: 1;
     pointer-events: all;
-    overflow: initial;
-    height: auto;
   }
 }
 
