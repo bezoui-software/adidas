@@ -109,6 +109,8 @@ header .hide-mobile-navbar {
     transform: translate(0, -100%);
     opacity: 0;
     pointer-events:  none;
+    overflow: hidden;
+    height: 0;
   }
 }
 
@@ -117,6 +119,8 @@ header .hide-mobile-navbar {
     transform: translate(0, 0);
     opacity: 1;
     pointer-events: all;
+    overflow: initial;
+    height: auto;
   }
 }
 
