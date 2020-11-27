@@ -1,5 +1,7 @@
 :root {
   --main-color: #f44d43;
+  
+  --header-z-index: 999;
 }
 
 * {
@@ -27,7 +29,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 15px;
-  z-index: 999;
+  z-index: var(--header-z-index);
 }
 
 header #logo {
@@ -76,6 +78,7 @@ header #mobile-navbar {
 header #mobile-navbar .link {
   width: 100%;
   border-radius: 0;
+  z-index: calc(var(--header-z-index) - 1);
 }
 
 header #mobile-navbar .link:active {
@@ -94,6 +97,7 @@ header #mobile-navbar-toggle {
   display: none;
   position: absolute;
   left: 20px;
+  cursor: pointer;
 }
 
 header .hide-mobile-navbar {
